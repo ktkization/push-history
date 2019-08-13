@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App'
 
+import 'chota'
+
 import router from './router'
 
 
