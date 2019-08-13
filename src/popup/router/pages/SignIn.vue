@@ -10,8 +10,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-p {
-  font-size: 20px;
-}
+<style scoped>
+
 </style>

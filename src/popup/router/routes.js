@@ -1,8 +1,8 @@
-import PageIndex from './pages/Index'
+import PageSignIn from './pages/SignIn'
 
 export default [
   {
-    path: '/',
-    component: PageIndex
+    path: "/",
+    component: PageSignIn
   }
-]
+];
