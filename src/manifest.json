@@ -15,5 +15,11 @@
     "scripts": [
       "background.js"
     ]
-  }
+  },
+  "permissions": [
+    "identity",
+    "*://*.google.com/*",
+    "*://*.pushbullet.com/*",
+    "storage"
+  ]
 }
