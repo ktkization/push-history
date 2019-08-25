@@ -19,12 +19,13 @@ export default {
         `https://www.pushbullet.com/authorize?client_id=${this.clientId}&redirect_uri=${redirectUrl}&response_type=token`
       );
     },
-    async signin() {
+    signin() {
       chrome.identity.launchWebAuthFlow(
         { url: this.getAuthUrl(), interactive: true },
         function(redirectUri) {
           if (redirectUri.includes('oauth2#access_token=')) {
             let token = redirectUri.split('oauth2#access_token=')[1];
+            this.authToken = token;
             chrome.storage.local.set({ authToken: token });
           }
         }
@@ -32,12 +33,8 @@ export default {
     },
     getAuthToken() {
       return new Promise(function(resolve, reject) {
-        $storage.get('authToken', function(result) {
-          if (result.key) {
-            resolve(token);
-          } else {
-            reject(chrome.runtime.lastError);
-          }
+        chrome.storage.local.get(['authToken'], function(result) {
+          result['authToken'] ? resolve(result['authToken']) : reject(null);
         });
       });
     }
