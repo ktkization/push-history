@@ -12,6 +12,11 @@ export default {
       authToken: null
     };
   },
+  mounted() {
+    if(this.isAuthenticated()) {
+      this.$router.push('search');
+    }
+  },
   methods: {
     getAuthUrl() {
       const redirectUrl = chrome.identity.getRedirectURL('oauth2');
@@ -34,9 +39,21 @@ export default {
     getAuthToken() {
       return new Promise(function(resolve, reject) {
         chrome.storage.local.get(['authToken'], function(result) {
-          result['authToken'] ? resolve(result['authToken']) : reject(null);
+          console.log(`Token: ${result['authToken']}`)
+          result['authToken'] ? resolve(result['authToken']) : resolve(null);
         });
       });
+    },
+    async isAuthenticated() {
+      let tokenExists = false;
+      if (this.authToken) {
+        tokenExists = true;
+      } else {
+        (await this.getAuthToken())
+          ? (tokenExists = true)
+          : (tokenExists = false);
+      }
+      return tokenExists
     }
   }
 };
