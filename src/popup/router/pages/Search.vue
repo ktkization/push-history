@@ -5,17 +5,17 @@
       <a @click="changeTab('search')" v-bind:class="activeTab === 'search' ? 'active' : ''">Search</a>
     </nav>
     <div v-if="activeTab === 'recent'">
-      <recent></recent>
+      <recent-tab></recent-tab>
     </div>
     <div v-else-if="activeTab === 'search'">
-      <search></search>
+      <search-tab></search-tab>
     </div>
   </div>
 </template>
 
 <script>
-import Search from '../../components/Search';
-import Recent from '../../components/Recent';
+import SearchTab from '../../components/SearchTab';
+import RecentTab from '../../components/RecentTab';
 export default {
   data() {
     return {
@@ -25,8 +25,8 @@ export default {
     };
   },
   components: {
-    Search,
-    Recent
+    SearchTab,
+    RecentTab
   },
   methods: {
     changeTab(tab) {
