@@ -15,13 +15,13 @@ Run Dev: `npm run watch:dev`
 Build: `npm run build` 
 
 ## Screenshots
-### Sign In Screen
+#### Sign In Screen
 <img src="screenshots/sign_in.png" alt="sign_in_screen" width="250"/>
 
-### OAuth Screen
+#### OAuth Screen
 <img src="screenshots/oauth.png" alt="oauth_screen" width="350"/>
 
-### Dashboard Screen (Search + History)
+#### Dashboard Screen (Search + History)
 <img src="screenshots/dashboard.png" alt="dashboard_screen" width="250" style="border:1px solid grey;"/>
 
 ### TODO
