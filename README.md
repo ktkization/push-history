@@ -16,13 +16,13 @@ Build: `npm run build`
 
 ## Screenshots
 ### Sign In Screen
-![sign_in_screen](screenshots/sign_in.png)
+<img src="screenshots/sign_in.png" alt="sign_in_screen" style="width:200px;"/>
 
 ### OAuth Screen
-![sign_in_screen](screenshots/oauth.png)
+<img src="screenshots/oauth.png" alt="oauth_screen" style="width:200px;"/>
 
 ### Dashboard Screen (Search + History)
-![sign_in_screen](screenshots/dashboard.png)
+<img src="screenshots/dashboard.png" alt="dashboard_screen" style="width:200px;"/>
 
 ### TODO
 * Finalize the Search functionality
