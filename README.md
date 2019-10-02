@@ -15,14 +15,14 @@ Run Dev: `npm run watch:dev`
 Build: `npm run build` 
 
 ## Screenshots
-#### Sign In Screen
-![sign_in_screen]('screenshots/sign_in.png')
+### Sign In Screen
+![sign_in_screen](screenshots/sign_in.png)
 
-#### OAuth Screen
-![sign_in_screen]('screenshots/oauth.png')
+### OAuth Screen
+![sign_in_screen](screenshots/oauth.png)
 
-#### Dashboard Screen (Search + History)
-![sign_in_screen]('screenshots/dashboard.png')
+### Dashboard Screen (Search + History)
+![sign_in_screen](screenshots/dashboard.png)
 
 ### TODO
 * Finalize the Search functionality
